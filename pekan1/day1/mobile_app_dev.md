@@ -6,12 +6,10 @@
 *   **Output Teknis:** File instalasi binary (.apk/.aab untuk Android, .ipa untuk iOS).
 
 ### 2. Perbedaan Web vs. Mobile Development
-| Aspek | Web Development | Mobile App Development |
-| :--- | :--- | :--- |
-| **Eksekusi** | Berjalan di dalam Browser | Berjalan langsung di atas OS |
-| **Distribusi** | Diakses via URL langsung | Lewat App Store / Play Store |
-| **Hardware** | Akses terbatas via API browser | Akses penuh ke sensor (GPS, Kamera, NFC) |
-| **Offline** | Sangat terbatas | Sangat mumpuni dengan Local DB |
+*   **Eksekusi:** Berjalan di dalam Browser (Web) vs Berjalan langsung di atas Operating System (Mobile).
+*   **Distribusi:** Diakses via URL langsung (Web) vs Lewat App Store / Play Store (Mobile).
+*   **Hardware:** Akses terbatas melalui API browser (Web) vs Akses penuh ke sensor seperti GPS, Kamera, dan NFC (Mobile).
+*   **Offline/Online:** Kemampuan offline sangat terbatas pada Web, sedangkan Mobile sangat mumpuni dengan Local Database.
 
 **Contoh Implikasi:** Aplikasi perbankan membutuhkan Mobile App karena fitur keamanan biometrik (FaceID/Fingerprint) lebih aman diakses secara native dibanding via web.
 
@@ -36,9 +34,9 @@ Pendekatan yang menggabungkan efisiensi satu codebase dengan performa native (mi
 
 ### 7. React Native vs. ReactJS
 React Native berada dalam posisi unik: menggunakan paradigma React untuk membuat aplikasi mobile asli.
-*   **Target:** RN (Android/iOS) vs ReactJS (Browser).
-*   **Sintaks:** RN menggunakan `<View>` & `<Text>` vs ReactJS menggunakan `<div>` & `<span>`.
-*   **Styling:** RN menggunakan `StyleSheet` (mirip CSS tapi terbatas) vs ReactJS menggunakan CSS murni.
+*   **Target:** ReactJS menargetkan Browser, sedangkan React Native menargetkan Mobile OS (Android/iOS).
+*   **Sintaks:** ReactJS menggunakan tag HTML (`<div>`, `<span>`), sedangkan React Native menggunakan komponen native (`<View>`, `<Text>`).
+*   **Styling:** ReactJS menggunakan CSS murni/SCSS, sedangkan React Native menggunakan `StyleSheet` (CSS-in-JS dengan properti terbatas).
 
 ### 8. Tantangan Pengembangan Mobile
 Tantangan utama adalah **Fragmentasi** (ribuan model HP dengan spek berbeda). React Native mengatasi ini dengan menyediakan komponen yang konsisten di berbagai perangkat dan fitur *Hot Reloading* untuk perbaikan cepat.
