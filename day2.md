@@ -37,4 +37,4 @@
 - **`metro.config.js`**: Konfigurasi untuk packager/bundler JavaScript.
 - **`index.js`**: Register komponen utama ke app registry native.
 
-*Struktur ini memungkinkan pemisahan konfigurasi spesifik OS namun tetap berbagi logika utama di JS/TS.*
+*Struktur ini memungkinkan pemisahan konfigurasi spesifik OS namun tetap berbagi logika utama di JS/TS..*
