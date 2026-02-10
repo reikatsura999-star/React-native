@@ -1,7 +1,7 @@
-import FormMini from "./src/components/FormMini"
-export default function App() {
+import FormMini from "./src/components/FormMini";
+
+function App() {
   return (
-   <FormMini />
-  )
+    <FormMini />
+  );
 }
-  
