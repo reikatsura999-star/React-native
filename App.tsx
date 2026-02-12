@@ -1,7 +1,7 @@
-import FormMini from "./src/components/FormMini";
+import React from 'react';
+import FormMini from './src/components/FormMini';
+import ScrolData from './src/components/ScrolData';
 
-function App() {
-  return (
-    <FormMini />
-  );
+export default function App() {
+  return <ScrolData />;
 }
