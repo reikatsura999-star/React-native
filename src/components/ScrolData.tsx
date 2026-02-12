@@ -54,7 +54,7 @@ export default function ScrolData() {
   };
 
   const renderItem = ({ item }: { item: Data }) => (
-    <View style={styles.continer}>
+    <View style={styles.headercontainer}>
       <Text>{item.age}</Text>
     </View>
   );
@@ -80,39 +80,52 @@ export default function ScrolData() {
 
     // </View>
 
-    <View>
+    <View style={styles.screen}>
       <SectionList
         sections={sections}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
-          <View>
-            <Text>{item}</Text>
+          <View style={styles.itemCard}>
+            <Text style={{ fontSize:15 }}>{item}</Text>
           </View>
         )}
         renderSectionHeader={({ section: { title } }) => (
-          <View>
-            <Text style={styles.name}>{title}</Text>
+          <View style={styles.headercontainer}>
+            <Text style={styles.headerText}>{title}</Text>
           </View>
         )}
+        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh}/>}
+        ListEmptyComponent={<Text>Data gak ada</Text>}
       />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  continer: {
+  screen: {
     flex: 1,
-    borderWidth: 1,
-    borderColor: 'black',
-    margin: 10,
-    padding: 20,
-    borderRadius: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderBottomWidth: 1,
+    backgroundColor: 'white',
   },
-  name: {
-    fontSize: 18,
+  headercontainer: {
+    backgroundColor: '#f8f8f8',
+    padding: 10,
+    borderWidth:1,
+    borderColor:'black'
+  },
+  headerText: {
+    fontSize: 20,
     fontWeight: 'bold',
+    color: 'blue',
+    textTransform: 'uppercase'
   },
+  itemCard: {
+   backgroundColor: 'white',
+   padding: 5,
+   marginVertical: 5,
+   marginHorizontal:10,
+   borderWidth:1,
+   borderColor:'black',
+   borderRadius:10,
+   elevation:5
+  }
 });
