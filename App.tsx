@@ -1,7 +1,9 @@
-import React from 'react';
-import FormMini from './src/components/FormMini';
-import ScrolData from './src/components/ScrolData';
+import { Text, View } from "react-native"
 
 export default function App() {
-  return <ScrolData />;
+  return (
+    <View>
+      <Text>Hello World</Text>
+    </View>
+  )
 }
