@@ -1,11 +1,11 @@
-import { Text, View } from "react-native";
-import ScrolData from "./src/components/ScrolData";
-
+import { View } from 'react-native'
+import ProductsScreen from './src/components/ProductsScreen'
+import React from 'react'
 
 export default function App() {
   return (
-    <View>
-      <ScrolData />
+    <View style={{ flex: 1 }}>
+      <ProductsScreen />
     </View>
   )
 }
